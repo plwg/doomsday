@@ -64,10 +64,9 @@ int check_valid_date(int year, int month, int day)
 
 int calc_index_day(int year)
 {
-    int c = (year / 100) % 4;
     const int index_day[] = {2, 0, 5, 3};
 
-    return index_day[c];
+    return index_day[(year / 100) % 4];
 }
 
 int calc_anchor_day(int year)
